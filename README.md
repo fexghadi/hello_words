@@ -1,6 +1,6 @@
 Greetings!
 
-This is my first project in python, or even in programming. Following a 25-day catch-up course in python and SQL, I have made this console-rendered Scrabble game.
+This is my first project in python, or even in programming. Following a 25-day catch-up course in python and SQL, I have made this console-rendered Scrabble game. It is currently working only in French.
 
 So far, only the very basics are laid down: you can place words on the board, it checks that you have the right tiles, and if you play through a tile already on the board, it will work as well. The score is also calculated properly.
 
