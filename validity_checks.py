@@ -14,7 +14,7 @@ def remove_accents(word: str) -> str:
 # Diacritics are fully removed; only base Unicode characters are retained. For example, "ö" becomes "o".
 def create_clean_lexicon(lexicon) -> set:
     full_lexicon = lexicon
-    clean_set = {remove_accents(unicodedata.normalize('NFKD', word)) for word in full_lexicon.lexique if word.isalpha()}
+    clean_set = {(remove_accents(unicodedata.normalize('NFKD', word))).upper() for word in full_lexicon.lexique if word.isalpha()}
     del full_lexicon
     return clean_set
 
@@ -22,13 +22,17 @@ def create_clean_lexicon(lexicon) -> set:
 VALID_WORDS = create_clean_lexicon(Lexique383())
 
 
+# Removes accents and turns all letters into their uppercase format.
+def clean_input(inp : str) -> str:
+    return remove_accents(inp).upper()
+
+
 # Checks that the word exists in the provided lexicon.
 # The official reference is the French dictionary called ODS, for Officiel Du Scrabble, by Larousse.
 # However, we are using a different lexicon in this program, obtained from the "Pylexique" library.
 # No exception is raised here; the treatment of the returned value happens in the Player.enter_word method.
 def word_is_valid(word: str) -> bool:
-    user_word = remove_accents(word.lower())
-    return user_word in VALID_WORDS
+    return word in VALID_WORDS
 
 
 # This function checks that the input coordinates exist on the board. Nothing more.

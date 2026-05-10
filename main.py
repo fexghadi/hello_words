@@ -18,17 +18,17 @@ if __name__ == "__main__":
     # The color of the square under the H persists through changing the square's content to a Tile object.
     # This is normal behavior for now, it will be addressed later when the player places a word on the board.
     # That way, the bonus can be calculated for the play before it gets overwritten.
-    game.board.grid[7][3].content = game.bag.content[35]  # H
-    game.board.grid[7][4].content = game.bag.content[20]  # E
-    game.board.grid[7][5].content = game.bag.content[48]  # L
-    game.board.grid[7][6].content = game.bag.content[49]  # L
-    game.board.grid[7][7].content = game.bag.content[65]  # O
-    game.board.grid[7][7].bonus = Bonus.HAS_TILE          # Makes the letter bright white
-
-    game.board.grid[6][7].content = game.bag.content[96]  # W
-    game.board.grid[8][7].content = game.bag.content[70]  # R
-    game.board.grid[9][7].content = game.bag.content[15]  # D
-    game.board.grid[10][7].content = game.bag.content[80] # S
+    # game.board.grid[7][3].content = game.bag.content[35]  # H
+    # game.board.grid[7][4].content = game.bag.content[20]  # E
+    # game.board.grid[7][5].content = game.bag.content[48]  # L
+    # game.board.grid[7][6].content = game.bag.content[49]  # L
+    # game.board.grid[7][7].content = game.bag.content[65]  # O
+    # game.board.grid[7][7].bonus = Bonus.HAS_TILE          # Makes the letter bright white
+    #
+    # game.board.grid[6][7].content = game.bag.content[96]  # W
+    # game.board.grid[8][7].content = game.bag.content[70]  # R
+    # game.board.grid[9][7].content = game.bag.content[15]  # D
+    # game.board.grid[10][7].content = game.bag.content[80] # S
 
     # print(type(bag.content[80])) # ok class Tile
     # print(type(board.grid[10][7])) # ok class Square
